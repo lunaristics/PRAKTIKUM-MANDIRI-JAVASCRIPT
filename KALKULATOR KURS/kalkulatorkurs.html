@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kurs Rupiah ke Beberapa Mata Uang</title>
+</head>
+<body>
+    <div class="kursrupiah" id="kalkulator">
+		<h1>Kurs Rupiah - Mata Uang Asing</h1>
+		<label><b>Masukkan Nilai</b></label>
+		<input type="text" value="" id="uang">
+		<select id="select">
+			<option>Valas</option>
+			<option value="dollar">Dollar</option>
+			<option value="dollarsg">Dollar Singapore</option>
+			<option value="ringgit">Ringgit</option>
+			<option value="yen">Yen</option>
+			<option value="euro">Euro</option>
+			<option value="riyal">Riyal</option>
+		</select>
+
+		<input type="button" id="nilairupiah" value="nilairupiah">
+	</div>
+
+    <script>
+    const content = document.getElementById(kalkulator);
+    const h2 = document.createElement('h2');
+    const tombol = document.getElementById(nilairupiah);
+
+    nilairupiah.onclick = function () {
+	    kalkulator.appendChild(h2);
+	    let uang = Number(document.getElementById("uang").value);
+	    let pilihan = document.getElementById("select").value;
+	    let hasil = document.querySelector("h2");
+
+	    if (pilihan == 'dollar') {
+		hasil.innerHTML = 'Rp.' + (uang * 9915) + ',00';
+	    } else if (pilihan == 'dollarsg') {
+		hasil.innerHTML = 'Rp.' + (uang * 13472) + ',00';
+	    } else if (pilihan == 'ringgit') {
+		hasil.innerHTML = 'Rp.' + (uang * 874) + ',00';
+	    } else if (pilihan == 'yen') {
+		hasil.innerHTML = 'Rp.' + (uang * 120) + ',00';
+	    } else if (pilihan == 'euro') {
+		hasil.innerHTML = 'Rp.' + (uang * 15888) + ',00';
+	    } else if (pilihan == 'riyal') {
+		hasil.innerHTML = 'Rp.' + (uang * 3592) + ',00';
+	    }
+}
+</script>
+</body>
+</html>
