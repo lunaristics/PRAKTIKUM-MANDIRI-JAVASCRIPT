@@ -1,4 +1,4 @@
 # PRAKTIKUM-MANDIRI-JAVASCRIPT
-# Nama : Lutfiah Masida Zulfa
-# NIM : 0110121151
-# KELAS : SI07
+ Nama : Lutfiah Masida Zulfa
+ NIM : 0110121151
+ KELAS : SI07
